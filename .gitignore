@@ -1,0 +1,4 @@
+.xmake
+.idea
+build/
+cmake-build-*
