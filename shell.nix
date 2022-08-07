@@ -1,7 +1,6 @@
-{ pkgs ? import <nixpkgs> {} }:
-  pkgs.mkShell {
-    nativeBuildInputs = [
-        pkgs.buildPackages.spdlog
-        pkgs.buildPackages.gcc12
-    ];
+with import <nixpkgs> {};
+stdenv.mkDerivation {
+  name = "env";
+  nativeBuildInputs = [ cmake ];
+  buildInputs = [ aws-sdk-cpp ];
 }
